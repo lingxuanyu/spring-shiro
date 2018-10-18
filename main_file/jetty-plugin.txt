@@ -1,0 +1,22 @@
+ <properties>
+  	<ver.jetty-maven-plugin>9.4.11.v20180605</ver.jetty-maven-plugin>
+  </properties>
+
+<build>
+	<plugins>
+		<plugin>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-maven-plugin</artifactId>
+			<version>${ver.jetty-maven-plugin}</version>
+			<configuration>
+				<scanIntervalSeconds>3</scanIntervalSeconds>
+				<httpConnector>
+					<port>8089</port>
+				</httpConnector>
+				<webAppConfig>
+					<contextPath>/${project.name}</contextPath>
+				</webAppConfig>
+			</configuration>
+		</plugin>
+	</plugins>
+	</build>
